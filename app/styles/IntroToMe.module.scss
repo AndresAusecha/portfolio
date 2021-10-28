@@ -1,0 +1,13 @@
+.introToMe {
+  max-height: 250px;
+  &ProfilePicture {
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    img {
+      border-radius: 50%;
+      max-width: 20%;
+      height: 200px;
+    }
+  }
+}
