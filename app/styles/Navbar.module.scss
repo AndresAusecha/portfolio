@@ -1,0 +1,22 @@
+.navbar {
+  background-color: #263238;
+  padding: 1rem;
+  ul {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    li {
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+      button {
+        color: white;
+        font-weight: bold;
+        border: none;
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

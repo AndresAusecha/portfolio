@@ -1,13 +1,13 @@
 .introToMe {
-  max-height: 250px;
   &ProfilePicture {
     height: min-content;
     display: flex;
     justify-content: center;
     img {
+      margin-top: 5rem;
       border-radius: 50%;
       max-width: 20%;
-      height: 200px;
+      height: 230px;
     }
   }
 }
