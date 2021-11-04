@@ -7,10 +7,22 @@ body {
 }
 
 .parallax {
-  background-image: url("../assets/images/background.jpeg");
+  /* background-image: url("../assets/images/background.jpeg"); */
+  background: linear-gradient(0deg, rgba(169,186,186,1) 0%, rgba(200,172,121,1) 100%);
   height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat:repeat;
   background-size: cover;
+}
+
+.tech-stack-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem ;
+}
+
+.tech-stack-images img {
+  margin-top: 0.5rem;
 }
