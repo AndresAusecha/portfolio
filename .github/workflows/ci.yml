@@ -21,4 +21,8 @@ jobs:
           cd app
           npm install --legacy-peer-deps
           npm run build
-          ls
+          git checkout gh-pages
+          cp -R .next/ /docs
+          git add .
+          git commit -m "add content"
+          git push
