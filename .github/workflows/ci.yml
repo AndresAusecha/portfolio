@@ -24,6 +24,8 @@ jobs:
           git checkout gh-pages
           cd ..
           cp -R app/.next/* docs
+          git config --global user.email "andres@aamsis.co"
+          git config --global user.name "Andres Ausecha"
           git add .
           git commit -m "add content"
           git push
