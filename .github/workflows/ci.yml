@@ -25,7 +25,7 @@ jobs:
           cd ..
           cp -R app/.next/* docs
           git config --global user.email "andres@aamsis.co"
-          git config --global user.name "Andres Ausecha"
+          git config --global user.name "AndresAusecha"
           git add .
           git commit -m "add content"
           git push
