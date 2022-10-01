@@ -28,4 +28,5 @@ jobs:
           git config --global user.name "AndresAusecha"
           git add .
           git commit -m "add content"
-          git push
+          git remote add origin https://github.com/AndresAusecha/portfolio.git
+          git push -u origin gh-pages
