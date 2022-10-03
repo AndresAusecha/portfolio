@@ -26,7 +26,6 @@ jobs:
           cp -R app/.next/static/* docs
           git config --global user.email "andres@aamsis.co"
           git config --global user.name "AndresAusecha"
-          git remote set-url upstream https://${{secrets.PERSONAL_TOKEN}}@github.com/AndresAusecha/portfolio.git
           git remote set-url origin https://${{secrets.PERSONAL_TOKEN}}@github.com/AndresAusecha/portfolio.git
           git add .
           git commit -m "add content"
