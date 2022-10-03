@@ -23,7 +23,7 @@ jobs:
           npm run build
           git checkout gh-pages
           cd ..
-          cp -R app/.next/static/* docs
+          cp -R app/.next/* docs
           git config --global user.email "andres@aamsis.co"
           git config --global user.name "AndresAusecha"
           git remote set-url origin https://${{secrets.PERSONAL_TOKEN}}@github.com/AndresAusecha/portfolio.git
