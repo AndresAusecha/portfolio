@@ -34,3 +34,4 @@ jobs:
           force_with_lease: true
           github_token: ${{ secrets.PERSONAL_TOKEN }}
           branch: gh-pages
+          repository: https://${{ secrets.PERSONAL_TOKEN }}@github.com/AndresAusecha/portfolio.git
