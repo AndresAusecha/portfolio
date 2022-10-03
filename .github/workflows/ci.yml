@@ -26,12 +26,8 @@ jobs:
           cp -R app/.next/static/* docs
           git config --global user.email "andres@aamsis.co"
           git config --global user.name "AndresAusecha"
+          git remote set-url upstream https://${{secrets.PERSONAL_TOKEN}}@github.com/AndresAusecha/portfolio.git
+          git remote set-url origin https://${{secrets.PERSONAL_TOKEN}}@github.com/AndresAusecha/portfolio.git
           git add .
           git commit -m "add content"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          force_with_lease: true
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
-          branch: gh-pages
-          repository: https://${{ secrets.PERSONAL_TOKEN }}@github.com/AndresAusecha/portfolio.git
+          git push
