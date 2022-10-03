@@ -26,6 +26,9 @@ jobs:
           cp -R app/.next/static/* docs
           git config --global user.email "andres@aamsis.co"
           git config --global user.name "AndresAusecha"
-          git add .
-          git commit -m "add content"
-          git push -u origin gh-pages
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          force_with_lease: true
+          branch: gh-pages
