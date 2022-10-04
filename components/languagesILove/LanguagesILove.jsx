@@ -1,6 +1,6 @@
 export const LanguagesILove = () => (
   <>
-    <h4 style={{ textAlign: 'center', color: 'white' }}>
+    <h4 style={{ textAlign: 'center', color: 'white', marginTop: "5rem" }}>
       Languages I love
     </h4>
     <div style={{ display: 'flex', justifyContent: 'center', padding: '1rem' }}>
