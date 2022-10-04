@@ -1,0 +1,12 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color: white;
+    margin-top: 5rem;
+
+    img { 
+        width: 60vw;
+        min-width: 350px;
+    }
+}

@@ -6,7 +6,7 @@ import { Experience } from '../components/Experience/Experience';
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ width: '100%' }}>
       <Navbar />
       <div className="parallax">
         <Head />
