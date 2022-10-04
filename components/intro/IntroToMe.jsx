@@ -19,6 +19,9 @@ export const Head = () => (
       <a href="https://github.com/AndresAusecha" target="_blank" rel="noopener noreferrer">
         <img src="/images/github.png" alt="" width={50} />
       </a>
+      <a href="https://www.linkedin.com/in/aam8593/" target="_blank" rel="noopener noreferrer">
+        <img src="/images/linkedinIC.png" alt="" width={45} />
+      </a>
     </div>
   </>
 );
