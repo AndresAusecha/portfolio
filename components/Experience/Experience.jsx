@@ -4,7 +4,7 @@ import { TextRenderer } from '../textRenderer/TextRenderer';
 export const Experience = () => (
   <div className={styles.experience}>
     <h2>
-      Projects
+      My current customers
     </h2>
     <h4>
       MLREEF
