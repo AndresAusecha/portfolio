@@ -1,11 +1,14 @@
 .aboutme {
+  display: flex;
   background-color: transparent;
   color: white;
   min-height: 100px;
   height: auto;
-
+  justify-content: center;
+  
   p {
-    text-align: left;
+    max-width: 800px;
+    text-align: center;
     margin: 2rem;
     padding: 2rem;
   }
