@@ -11,8 +11,7 @@ export default function Home() {
       <div className="parallax">
         <Head />
         <TextRenderer
-          text="Hi, I am Andres Ausecha, Systems and software engineer from Colombia National University. I am also
-          Fullstack web developer, highly passionate about technology, languages, development patterns, and user functionality."
+          text="Hi, I am Andres Ausecha, Software engineer and technology passionate"
         />
         <LanguagesILove />
         <Experience />

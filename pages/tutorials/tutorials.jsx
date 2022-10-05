@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { Navbar } from "../../components/navbar/Navbar";
 import styles from '../../styles/Tutorials.module.scss';
 
@@ -8,11 +10,9 @@ const Tutorials = () => {
     <div className="parallax">
       <div className={styles.tutorials}>
         <h2>
-          Tutorials page
+          Tutorials
         </h2>
-        <p>
-          content will be added soon...
-        </p>
+        <p>to be continued...</p>
       </div>
     </div>
     </>

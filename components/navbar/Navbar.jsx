@@ -7,14 +7,14 @@ export const Navbar = () => {
   return (
   <div className={styles.navbar}>
     <ul>
-      <li style={{ backgroundColor: router.asPath === "/" ? "#13ecff" : "" }}>
+      <li style={{ backgroundColor: router.asPath === "/" ? "#4C5B61" : "" }}>
         <Link
           href={"/"}
         >
           Home
         </Link>
       </li>
-      <li style={{ backgroundColor: router.asPath === "/tutorials" ? "#13ecff" : "" }}>
+      <li style={{ backgroundColor: router.asPath === "/tutorials" ? "#4C5B61" : "" }}>
         <Link
           href={"/tutorials"}
         >
