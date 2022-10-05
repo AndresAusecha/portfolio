@@ -1,7 +1,7 @@
 import { Navbar } from "../../components/navbar/Navbar";
 import styles from '../../styles/Tutorials.module.scss';
 
-export const Tutorials = () => {
+const Tutorials = () => {
   return (
     <>
     <Navbar />
@@ -18,3 +18,5 @@ export const Tutorials = () => {
     </>
   )
 }
+
+export default Tutorials;
