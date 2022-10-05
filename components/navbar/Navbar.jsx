@@ -18,7 +18,7 @@ export const Navbar = () => {
         <Link
           href={"/tutorials"}
         >
-            Tutorials
+          Tutorials
         </Link>
       </li>
       {/*
