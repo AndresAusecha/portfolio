@@ -3,7 +3,7 @@ import { TextRenderer } from '../textRenderer/TextRenderer';
 
 export const Experience = () => (
   <div className={styles.experience}>
-    <h2>
+    <h2 style={{ textAlign: "center" }}>
       My current customers
     </h2>
     <h4>
@@ -17,7 +17,7 @@ export const Experience = () => (
     <a href="https://www.mlreef.com/" target="_blank" rel="noopener noreferrer">
       <img src="/images/mlreef1.png" width="60vw" />
     </a>
-    <a href="https://about.mlreef.com/" target="_blank" rel="noopener noreferrer" style={{ marginTop: "2rem" }}>
+    <a href="https://about.mlreef.com/" target="_blank" rel="noopener noreferrer" style={{ margin: "2rem 0" }}>
       <img src="/images/mlreef2.png" width="60vw" />
     </a>
   </div>

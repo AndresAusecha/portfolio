@@ -8,7 +8,7 @@ const TutorialCard = (props) => {
   } = props;
   return (
     <div style={{ display: "flex" }}>
-      <img src={image} alt="" srcset="" />
+      <img src={image} alt="" />
       <TextRenderer text="Learn how you can refactor a React component or a whole view, 
         in order to improve readability and manage state in a more professional way" />
     </div>
