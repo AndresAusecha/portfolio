@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { Navbar } from "../../components/navbar/Navbar";
 import styles from '../../styles/Tutorials.module.scss';
+import TutorialCard from "./TutorialCard";
 
 const Tutorials = () => {
   return (
@@ -12,7 +11,14 @@ const Tutorials = () => {
         <h2>
           Tutorials
         </h2>
-        <p>to be continued...</p>
+        <div className={styles.tutorialsContent}>
+          <TutorialCard
+            image="/images/useReducer.png"
+            title="useState vs. useReducer and Context"
+            description="Refactor a component with useReducer to make it look more readable"
+            tutorialId="refactor-with-useReducer"
+          />
+        </div>
       </div>
     </div>
     </>
