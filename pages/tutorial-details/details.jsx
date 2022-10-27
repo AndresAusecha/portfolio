@@ -23,7 +23,7 @@ const TutorialDetails = () => {
                 if (contentLine.startsWith("p/")) {
                   return (
                     <p key={ind}>
-                      {contentLine.substring(2, contentLine.length - 3)}
+                      {contentLine.substring(2, contentLine.length - 2)}
                     </p>
                   )
                 } else if (contentLine.startsWith("h3/")) {
