@@ -9,7 +9,7 @@ const TutorialCard = (props) => {
     tutorialId
   } = props;
   return (
-    <Link href={`/tutorial-details/${tutorialId}`}>
+    <Link href={`/tutorial-details?id=${tutorialId}`}>
       <div className={styles.tutorialsCard}>
         <div className={styles.tutorialsCardTop}>
           <img className={styles.tutorialsCardTopIc} src={image} alt="" />

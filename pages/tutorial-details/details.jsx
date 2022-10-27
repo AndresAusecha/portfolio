@@ -5,8 +5,9 @@ import data from "./data";
 
 const TutorialDetails = () => {
   const router = useRouter();
-  const { details } = router.query;
-  const tutorialContent = data.tutorialData.find((tuto) => tuto.id === details);
+  const { id } = router.query;
+  console.log(router.query);
+  const tutorialContent = data.tutorialData.find((tuto) => tuto.id === id);
 
   return (
     <>

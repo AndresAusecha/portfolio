@@ -1,3 +1,3 @@
-import TutorialDetails from "./[details]";
+import TutorialDetails from "./details";
 
 export default TutorialDetails;
