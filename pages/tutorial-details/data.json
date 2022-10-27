@@ -12,9 +12,9 @@
 
     "p/The answer is….probably yes. So today we will see an alternative that might work for you without installing new libraries or strange implementations with hard-to-understand concepts./p",
 
-    "p/We will talk about useReduce. This hook allows users to separate the component from logic to update the state, and that’s a very useful utility since you can reduce the lines of code you have in your component, and debug or maintain it more easily in the future. /p",
+    "p/We will talk about useReduce. This hook allows users to separate the component from logic to update the state, and that’s a very useful utility since you can reduce the lines of code you have in your component, and debug or maintain it more easily in the future./p",
 
-    "p/In this tutorial, we will also analyze an implementation for the scenario I just mentioned using both hooks(useState and useReducer), and at the end, we will compare the results. p",
+    "p/In this tutorial, we will also analyze an implementation for the scenario I just mentioned using both hooks(useState and useReducer), and at the end, we will compare the results./p",
 
     "p/The scenario consists of only two columns with cards, when the user double-clicks a card on the left side, that card will be selected and moved to the right side of “selected cards”, on the other side, if the user double-clicks a card on the right side then it will be “removed” from the list of the selected cards as you will see in the screenshot:/p",
 
@@ -35,7 +35,7 @@
 
     "img/tercera.png/img",
 
-    "h3/How can we isolate the component from the updating logic?",
+    "h3/How can we isolate the component from the updating logic?/h3",
     "R/ useReducer/h3",
 
     "p/This hook provides a very interesting API to modify the state in a way that will help us keep the DRY principles and clean code in our components, the reason is we have the logic to handle the state in a single pure function that contains a switch statement, it will match the type of action and then will return the new state, preventing us from repeating same logic or creating new functions to process the state information./p",
@@ -50,9 +50,9 @@
 
     "p/Finally I just want you to review how good looks the reducer. It contains all the logic in a pure and beautiful function that is very obvious and readable for anybody, now when we need to add a new feature, debug or refactor we will come here instead of looking for callbacks and functions spread everywhere. /p",
 
-    "h3/ Testable function: /h3",
+    "h3/Testable function:/h3",
 
-    "p/ Another benefit we shall notice is that we can easily test this reducer with a basic Jest testing setup, we would not need to mock events or user interactions so we could cover any single line of it, in contrast of useState that forces us to make the callbacks to be executed to run the lines (which is not always easy), and the effects of these calls are not always asserted quickly, sometimes they even depend on components side effects and lifecycles. Now if this function is in charge of handling our state we shall make sure that it always returns the values as expected /p",
+    "p/Another benefit we shall notice is that we can easily test this reducer with a basic Jest testing setup, we would not need to mock events or user interactions so we could cover any single line of it, in contrast of useState that forces us to make the callbacks to be executed to run the lines (which is not always easy), and the effects of these calls are not always asserted quickly, sometimes they even depend on components side effects and lifecycles. Now if this function is in charge of handling our state we shall make sure that it always returns the values as expected./p",
 
     "img/quinta.png/img",
 
