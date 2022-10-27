@@ -1,0 +1,29 @@
+.tutorialDetails {
+  margin-top: 6vh;
+
+  &Title {
+    padding-top: 6vh;
+    text-align: center;
+    color: white;
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &Lines {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      max-width: 800px;
+      h3, p {
+        text-align: justify;
+        color: white;
+      }
+    }
+  }
+}
