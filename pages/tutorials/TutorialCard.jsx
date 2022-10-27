@@ -1,18 +1,26 @@
-import { TextRenderer } from "../../components/textRenderer/TextRenderer";
+import Link from 'next/link';
+import styles from '../../styles/TutorialsCard.module.scss';
 
 const TutorialCard = (props) => {
   const {
+    image,
     title,
     description,
-    image
+    tutorialId
   } = props;
   return (
-    <div style={{ display: "flex" }}>
-      <img src={image} alt="" srcset="" />
-      <TextRenderer text="Learn how you can refactor a React component or a whole view, 
-        in order to improve readability and manage state in a more professional way" />
-    </div>
-  )  
+    <Link href={`/tutorials/${tutorialId}`}>
+      <div className={styles.tutorialsCard}>
+        <div className={styles.tutorialsCardTop}>
+          <img className={styles.tutorialsCardTopIc} src={image} alt="" />
+          <h4 className={styles.tutorialsCardTopTitle} style={{ color: "white" }}>
+            {title}
+          </h4>
+        </div>
+        <p style={{ color: "white" }}>{description}</p>
+      </div>
+    </Link>
+  )
 }
 
 export default TutorialCard;

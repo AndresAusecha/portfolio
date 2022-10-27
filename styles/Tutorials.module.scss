@@ -8,9 +8,9 @@
     color: white;
   }
 
-  p {
-    text-align: center;
-    color: white;
+  &Content {
+    display: flex;
+    justify-content: center;
   }
 
 }

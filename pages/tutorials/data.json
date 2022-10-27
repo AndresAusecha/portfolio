@@ -1,0 +1,75 @@
+{ 
+  "tutorialData": [
+  {
+    "id": "refactor-with-useReducer",
+    "title": "Manage state with useReducer",
+    "content": [
+    "p/First of all, the code that we will use as demostration of this article is located at the next repository: https://github.com/AndresAusecha/react-state-management-tutorial/p",
+
+    "p/When we think about keeping state information in modern functional React components, we immediately remember the useState hook. The API is straightforward to use and understand,and it is also perfect for small components that do not contain complex operations and user interactions, so is there a scenario when you might not want to use it?/p",
+
+    "p/Just consider a component like the next: you have a left column with cards like products, users, or whatever you want, and those cards can be switched to a right column. This would be a very simple scenario for a large enterprise system, we might also have a system to fetch that list of elements for cards, draggable cards or whatever, but for the moment let’s keep it simple. The useState hook might be a limited option even for a view like that, I mean obviously, you can make it work, but is it going to be readable? is the component going to have smelling code? is the complex logic going to be scrambled up with JSX?/p",
+
+    "p/The answer is….probably yes. So today we will see an alternative that might work for you without installing new libraries or strange implementations with hard-to-understand concepts./p",
+
+    "p/We will talk about useReduce. This hook allows users to separate the component from logic to update the state, and that’s a very useful utility since you can reduce the lines of code you have in your component, and debug or maintain it more easily in the future. /p",
+
+    "p/In this tutorial, we will also analyze an implementation for the scenario I just mentioned using both hooks(useState and useReducer), and at the end, we will compare the results. p",
+
+    "p/The scenario consists of only two columns with cards, when the user double-clicks a card on the left side, that card will be selected and moved to the right side of “selected cards”, on the other side, if the user double-clicks a card on the right side then it will be “removed” from the list of the selected cards as you will see in the screenshot:/p",
+
+    "img/primera.png/img",
+
+    "p/I also added a counter to show the number of cards that the user has selected, and a restart button to remove all from the right side./p",
+
+    "p/Let’s take a look at the first application:/p",
+    "a/https://github.com/AndresAusecha/react-state-management-tutorial/tree/main/use-state-hook/a",
+
+    "p/I only used the useState hook for the functionality, and from now you can spot some smelling chunks of code. First of all, the app.js that indexes all the other components contains a lot of boilerplate code, like the list of initial options, the state hooks, and last but not least, the components need to receive several state variables and functions in the props./p",
+
+    "img/segunda.png/img",
+
+    "h3/CardsList file:/h3",
+
+    "p/We will see now that listeners' bodies contain the logic to update state vars after every user interaction, this can be a downside, since that can end up in new errors and more smelling code in case we want update another state var in the same callback./p",
+
+    "img/tercera.png/img",
+
+    "h3/How can we isolate the component from the updating logic?",
+    "R/ useReducer/h3",
+
+    "p/This hook provides a very interesting API to modify the state in a way that will help us keep the DRY principles and clean code in our components, the reason is we have the logic to handle the state in a single pure function that contains a switch statement, it will match the type of action and then will return the new state, preventing us from repeating same logic or creating new functions to process the state information./p",
+
+    "p/Let’s compare now the previous CardsList component with the following one, it accomplishes the same purpose but making use of dispatch and the action of the reducer./p",
+
+    "img/cuarta.png/img",
+    
+    "h3/Readability:/h3",
+    
+    "p/The first thing we see is that this version receives fewer parameters, which is good because we will have less coupling between the component and the parent component. Second we could also see that the whole awkward logic has vanished(and located at functions.js file). We now might read this and immediately understand it, so if we need for example change or add new functionality it will take less time and effort./p",
+
+    "p/Finally I just want you to review how good looks the reducer. It contains all the logic in a pure and beautiful function that is very obvious and readable for anybody, now when we need to add a new feature, debug or refactor we will come here instead of looking for callbacks and functions spread everywhere. /p",
+
+    "h3/ Testable function: /h3",
+
+    "p/ Another benefit we shall notice is that we can easily test this reducer with a basic Jest testing setup, we would not need to mock events or user interactions so we could cover any single line of it, in contrast of useState that forces us to make the callbacks to be executed to run the lines (which is not always easy), and the effects of these calls are not always asserted quickly, sometimes they even depend on components side effects and lifecycles. Now if this function is in charge of handling our state we shall make sure that it always returns the values as expected /p",
+
+    "img/quinta.png/img",
+
+    "h3/Conclusions:/h3",
+
+    "p/I would encourage you to choose useReducer when you have a complex view, assembled by several components, reusable functions, state vars, and API calls. On the other hand, if your component is a very small piece of code that only has one or two state vars, or your logic is a very simple counter, or value setting, you should continue implementing state with useState by default, also you shall have in cosideration that you need also some boilerplate code for making useReducer to work correctly./p",
+
+    "p/The next thing I want to warn you about is what I call, the useState hell. The concept has the purpose to depict something like the following:/p",
+
+    "img/sexta.png/img",
+    
+    "p/Source: https://javascript.plainenglish.io/react-controlled-forms-with-hooks-538762aab935/p",
+
+    "p/A component that has multiple state vars and might look ugly and hard to read. This example is only a form so it does not look that bad, but I have witnessed files with hundreds of lines of code, that contain tables, filters, API calls, functions, data processing, and pose a thread to anybody that wishes to work with them. As a rule of thumb about how to proceed, I can suggest that if your component has more than 5 useState calls, you could consider to split the code into several components first, and then make use of useReducer if the first one is not enough./p",
+
+    "p/So, that’s it. I just want to thank you for the time reading, I hope this article helped you to have a new solution for your swiss army knife, the finding of this hook was really a relief to me since I was barely dealing with some React components that I wanted to refactor in the past./p"
+    ]
+  }]
+}
+
