@@ -34,7 +34,7 @@ const TutorialDetails = () => {
                 }
                 else if (contentLine.startsWith("img/")) {
                   return (
-                    <img key={ind} src={`/images/${contentLine.substring(4, contentLine.length - 3)}`} width="90%" />
+                    <img key={ind} src={`/images/${contentLine.substring(4, contentLine.length - 4)}`} width="90%" />
                   )
                 }
               }
