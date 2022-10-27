@@ -1,8 +1,9 @@
-export const tutorialData = [
+{ 
+  "tutorialData": [
   {
-    id: "refactor-with-useReducer",
-    title: "Manage state with useReducer",
-    content: [
+    "id": "refactor-with-useReducer",
+    "title": "Manage state with useReducer",
+    "content": [
     "p/First of all, the code that we will use as demostration of this article is located at the next repository: https://github.com/AndresAusecha/react-state-management-tutorial/p",
 
     "p/When we think about keeping state information in modern functional React components, we immediately remember the useState hook. The API is straightforward to use and understand,and it is also perfect for small components that do not contain complex operations and user interactions, so is there a scenario when you might not want to use it?/p",
@@ -57,8 +58,7 @@ export const tutorialData = [
 
     "h3/Conclusions:/h3",
 
-    `p/I would encourage you to choose useReducer when you have a complex view, assembled by several components, reusable functions, state vars, and API calls.
-    On the other hand, if your component is a very small piece of code that only has one or two state vars, or your logic is a very simple counter, or value setting, you should continue implementing state with useState by default, also you shall have in cosideration that you need also some boilerplate code for making useReducer to work correctly./p`,
+    "p/I would encourage you to choose useReducer when you have a complex view, assembled by several components, reusable functions, state vars, and API calls. On the other hand, if your component is a very small piece of code that only has one or two state vars, or your logic is a very simple counter, or value setting, you should continue implementing state with useState by default, also you shall have in cosideration that you need also some boilerplate code for making useReducer to work correctly./p",
 
     "p/The next thing I want to warn you about is what I call, the useState hell. The concept has the purpose to depict something like the following:/p",
 
@@ -68,7 +68,8 @@ export const tutorialData = [
 
     "p/A component that has multiple state vars and might look ugly and hard to read. This example is only a form so it does not look that bad, but I have witnessed files with hundreds of lines of code, that contain tables, filters, API calls, functions, data processing, and pose a thread to anybody that wishes to work with them. As a rule of thumb about how to proceed, I can suggest that if your component has more than 5 useState calls, you could consider to split the code into several components first, and then make use of useReducer if the first one is not enough./p",
 
-    "p/So, that’s it. I just want to thank you for the time reading, I hope this article helped you to have a new solution for your swiss army knife, the finding of this hook was really a relief to me since I was barely dealing with some React components that I wanted to refactor in the past./p",
+    "p/So, that’s it. I just want to thank you for the time reading, I hope this article helped you to have a new solution for your swiss army knife, the finding of this hook was really a relief to me since I was barely dealing with some React components that I wanted to refactor in the past./p"
     ]
-  }
-]
+  }]
+}
+

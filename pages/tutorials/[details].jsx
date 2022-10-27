@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import styles from "../../styles/TutorialDetails.module.scss";
 import { Navbar } from "../../components/navbar/Navbar";
-import { tutorialData } from "./data";
+import data from "./data";
 
 const TutorialDetails = () => {
   const router = useRouter();
   const { details } = router.query;
-  const tutorialContent = tutorialData.find((tuto) => tuto.id === details);
+  const tutorialContent = data.tutorialData.find((tuto) => tuto.id === details);
 
   return (
     <>
