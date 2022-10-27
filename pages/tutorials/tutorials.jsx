@@ -14,7 +14,7 @@ const Tutorials = () => {
         <div className={styles.tutorialsContent}>
           <TutorialCard
             image="/images/useReducer.png"
-            title="useState vs. useReducer and Context"
+            title="useState vs. useReducer"
             description="Refactor a component with useReducer to make it look more readable"
             tutorialId="refactor-with-useReducer"
           />
