@@ -4,6 +4,7 @@ export const LanguagesILove = () => (
       Languages I love
     </h4>
     <div style={{ display: 'flex', justifyContent: 'center', padding: '1rem', flexWrap: 'wrap' }}>
+      <img width="100px" height="100px" src="/images/kotlin.svg" alt="" />
       <img width="100px" height="100px" src="/images/java.png" alt="" />
       <img width="100px" height="100px" src="/images/javascript.png" alt="" />
       <img width="100px" height="100px" src="/images/node.png" alt="" />
