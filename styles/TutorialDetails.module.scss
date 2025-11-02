@@ -3,8 +3,13 @@
 
   &Title {
     padding-top: 6vh;
-    text-align: center;
+    justify-content: center;
     color: white;
+    display: flex;
+
+    h2 {
+      max-width: 800px;
+    }
   }
 
   &Content {
@@ -17,7 +22,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       width: 70%;
       max-width: 800px;
       h3, p {

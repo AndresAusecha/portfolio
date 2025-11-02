@@ -6,7 +6,6 @@ import data from "./data";
 const TutorialDetails = () => {
   const router = useRouter();
   const { id } = router.query;
-  console.log(router.query);
   const tutorialContent = data.tutorialData.find((tuto) => tuto.id === id);
 
   return (
@@ -14,9 +13,11 @@ const TutorialDetails = () => {
       <Navbar />
       <div className="parallax">
         <div className={styles.tutorialDetails}>
-          <h2 className={styles.tutorialDetailsTitle}>
-            {tutorialContent?.title}
-          </h2>
+          <div className={styles.tutorialDetailsTitle}>
+            <h2 >
+              {tutorialContent?.title}
+            </h2>
+          </div>
           <div className={styles.tutorialDetailsContent}>
             <div className={styles.tutorialDetailsContentLines}>
               {tutorialContent?.content.map((contentLine, ind) => {
@@ -37,6 +38,8 @@ const TutorialDetails = () => {
                   return (
                     <img key={ind} src={`/images/${contentLine.substring(4, contentLine.length - 4)}`} width="90%" />
                   )
+                } else if (contentLine.startsWith("link/")) {
+                  return <a key={ind} target="_blank" href={contentLine.substring(5, contentLine.length - 5)}>{contentLine.substring(5, contentLine.length - 5)}</a>
                 }
               }
               )}

@@ -19,8 +19,8 @@ const Tutorials = () => {
             tutorialId="refactor-with-useReducer"
           />
           <TutorialCard
-            image=""
-            title=""
+            image="/images/backend-for-frontend-solution.svg"
+            title="The BFF pattern introduction and example"
             description="The BFF a pattern to connect your microsservices with the outside world"
             tutorialId="the-BFF-pattern"
           />
