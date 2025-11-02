@@ -4,8 +4,18 @@ import { TextRenderer } from '../textRenderer/TextRenderer';
 export const Experience = () => (
   <div className={styles.experience}>
     <h2 style={{ textAlign: "center" }}>
-      My current customers
+      Companies I have worked with
     </h2>
+    <h4>
+      GREENLIGHT
+    </h4>
+    <TextRenderer 
+      text="This company has multiple product offerings in the financial sector, as backend developer, my main responsability was 
+      to add and maintain functionality in the existing microservices using Java/Kotlin with Spring Boot framework, also collaborated with the E2E tesing using technologies like Cypress and Kotest."
+    />
+    <a href="https://greenlight.com/" target="_blank" rel="noopener noreferrer">
+      <img src="/images/greenlight.webp" width="60vw" />
+    </a>
     <h4>
       MLREEF
     </h4>
