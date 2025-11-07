@@ -39,7 +39,7 @@ const TutorialDetails = () => {
                     <img key={ind} src={`/images/${contentLine.substring(4, contentLine.length - 4)}`} width="90%" />
                   )
                 } else if (contentLine.startsWith("link/")) {
-                  return <a key={ind} target="_blank" href={contentLine.substring(5, contentLine.length - 5)}>{contentLine.substring(5, contentLine.length - 5)}</a>
+                  return <a style={{ overflow: 'auto', maxWidth: '80%' }} key={ind} target="_blank" href={contentLine.substring(5, contentLine.length - 5)}>{contentLine.substring(5, contentLine.length - 5)}</a>
                 }
               }
               )}
