@@ -70,6 +70,37 @@
 
     "p/So, that’s it. I just want to thank you for the time reading, I hope this article helped you to have a new solution for your swiss army knife, the finding of this hook was really a relief to me since I was barely dealing with some React components that I wanted to refactor in the past./p"
     ]
-  }]
+  },
+  {
+    "id": "the-BFF-pattern",
+    "title": "A Backend for Frontend (BFF) is a specialized backend layer that sits between the front-end user interface and the underlying services or APIs",
+    "content": [
+      "h3/Introduction/h3",
+      "p/Backend for Frontend (BFF) is a specialized backend layer that sits between the front-end user interface and the underlying services or APIs. It’s designed specifically to serve the needs of a particular front-end—such as a web app, mobile app, or IoT device—by tailoring data, aggregating multiple service calls, and optimizing performance. This approach helps simplify front-end development, reduce over-fetching or under-fetching of data, and improve overall user experience by providing a custom API that matches the front-end’s exact requirements./p",
+      "h3/Motivation/h3",
+      "p/This proposal could be considered just another service that stands in the middle between the frontend and the backend microservices, so why should we consider this option?/p",
+      "p/When enterprise architectures scale, there might exist at some point multiple microservices, each one encapsulating their own domain and complexities, and being managed and maintained by teams that deploy independently from others. The data that each client requires might also be different, big companies usually have applications, websites, internal tools and so on, all of them requiring the data in different formats, paginations or even the composition of multiple responses to be present for the final user, the reason for that is the endpoints sometimes are built independently from the frontend and then the response not necessarily meets the requirements of some use-cases./p",
+      "p/Consider a paginated list of users that was built for a users dashboard, but what if the business needs now a paginated list of users and their accounts for other views, in this hypothetical scenario there are a few options; first, modify the backend to create a new endpoint, second, from the frontend fetch the users and then fetch the accounts(worst possible), and finally it could be possible to use the BFF, so that the frontend does not have to implement these promises and orchestrate the calls, nor handle the errors and so on./p",
+      "p/On top of that, what if the company architecture includes third-party services like content management systems, and then you end up with a frontend(mobile or web) that needs to call multiple different APIs? in the long run that is not going to be maintainable./p",
+      "p/For all of these necessities the BFF can become a great tool that will keep your frontend doing what is supposed, to render beautiful UI/UX to the final customer and not to become a bloating mass of code that will be scary to modify in every new feature./p",
+      "p/Last but not least, consider the security, when you expose all your backend services to the outside world, you would have to implement token validation, filters, security layers in every existing service causing more costs and effort, also the organization could be exposed to more potential breaches and information disclosures./p",
+      "h3/Implementation/h3",
+      "p/The BFF should act as an entry point for the backend system, the frontend web or mobile applications will not invoke or fetch information directly from the microservices, but will call the BFF that groups the endpoints for a certain domain. As always nothing is perfect, and there are tradeoffs that must be considered when applying this pattern in a real implementation./p",
+      "p/Advantages:/p",
+      "p/1. decouple the functionality in multiple but single-responsibility BFFs/p",
+      "p/2. prevent the exposure of microservices to the outside/p",
+      "p/independent services that can be deployed when the team needs to/p",
+      "p/Disadvantages:/p",
+      "p/1. potential bottlenecks if the team does not scale correctly/p",
+      "p/2. potential bloated services if the BFFs do not have a single responsibility/p",
+      "p/3. more services to scale and potential resources consumption/p",
+      "p/That said it is up to you whether you prefer a BFF, a gateway or expose your services and any other option. I will show now some basic example of an architecture composed of two microservices and a BFF. This architecture does not expose the micro services to the outside but only the BFF, I will use the Kubernetes services to expose only the BFF, and the consumer will have to invoke this service./p",
+      "p/The whole diagram will be shown in a moment to depict everything better.p/",
+      "img/Architecture-kubernetes-mono-repo.png/img",
+      "p/The example of the implementation can be found in the next link: /p",
+      "link/https://github.com/AndresAusecha/kubernetes-microservices-mono-repo/link"
+    ]
+  }
+]
 }
 

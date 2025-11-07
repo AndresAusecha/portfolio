@@ -18,6 +18,12 @@ const Tutorials = () => {
             description="Refactor a component with useReducer to make it look more readable"
             tutorialId="refactor-with-useReducer"
           />
+          <TutorialCard
+            image="/images/backend-for-frontend-solution.svg"
+            title="The BFF pattern introduction and example"
+            description="The BFF a pattern to connect your microsservices with the outside world"
+            tutorialId="the-BFF-pattern"
+          />
         </div>
       </div>
     </div>
