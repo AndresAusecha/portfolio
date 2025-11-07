@@ -7,7 +7,6 @@ export const LanguagesILove = () => (
       <img width="100px" height="100px" src="/images/kotlin.svg" alt="" />
       <img width="100px" height="100px" src="/images/java.png" alt="" />
       <img width="100px" height="100px" src="/images/javascript.png" alt="" />
-      <img width="100px" height="100px" src="/images/node.png" alt="" />
       <img width="100px" height="100px" src="/images/ts.jpg" alt="" />
     </div>
   </>

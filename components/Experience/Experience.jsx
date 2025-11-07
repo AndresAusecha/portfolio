@@ -6,6 +6,16 @@ export const Experience = () => (
     <h2 style={{ textAlign: "center" }}>
       Companies I have worked with
     </h2>
+     <h4>
+      PARKMOBILE
+    </h4>
+    <TextRenderer 
+      text="In this company my role as Senior backend developer is focused on the development and maintenance of integrations with partners in the domain of telematics and tolling.
+      The main technologies used are Java/Kotlin with Spring Boot framework, working in a microservices architecture deployed in AWS."
+    />
+    <a href="https://parkmobile.io/" target="_blank" rel="noopener noreferrer">
+      <img src="/images/parkmobile.jpg" width="60vw" />
+    </a>
     <h4>
       GREENLIGHT
     </h4>
