@@ -1,9 +1,8 @@
 .tutorials {
-  margin-top: 6vh;
-  height: 100vh;
+  margin-top: 4.2rem;
 
   h2 {
-    padding: 3rem;
+    padding: 2rem 0 0 0;
     text-align: center;
     color: white;
   }
@@ -16,4 +15,10 @@
     
   }
 
+}
+
+@media (min-width: 401px) {
+  .tutorials {
+    height: 100vh;
+  }
 }

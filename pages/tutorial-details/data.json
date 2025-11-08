@@ -4,7 +4,9 @@
     "id": "refactor-with-useReducer",
     "title": "Manage state with useReducer",
     "content": [
-    "p/First of all, the code that we will use as demostration of this article is located at the next repository: https://github.com/AndresAusecha/react-state-management-tutorial/p",
+    "p/First of all, the code that we will use as demostration of this article is located at the next repository:/p",
+
+    "link/https://github.com/AndresAusecha/react-state-management-tutorial/link",
 
     "p/When we think about keeping state information in modern functional React components, we immediately remember the useState hook. The API is straightforward to use and understand,and it is also perfect for small components that do not contain complex operations and user interactions, so is there a scenario when you might not want to use it?/p",
 
@@ -23,7 +25,7 @@
     "p/I also added a counter to show the number of cards that the user has selected, and a restart button to remove all from the right side./p",
 
     "p/Let’s take a look at the first application:/p",
-    "a/https://github.com/AndresAusecha/react-state-management-tutorial/tree/main/use-state-hook/a",
+    "link/https://github.com/AndresAusecha/react-state-management-tutorial/tree/main/use-state-hook/link  ",
 
     "p/I only used the useState hook for the functionality, and from now you can spot some smelling chunks of code. First of all, the app.js that indexes all the other components contains a lot of boilerplate code, like the list of initial options, the state hooks, and last but not least, the components need to receive several state variables and functions in the props./p",
 
